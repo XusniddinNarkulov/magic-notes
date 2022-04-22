@@ -1,17 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import ToggleComponent from "./ToggleComponent.js";
+import SearchComponent from "./SearchComponent.js";
+import CardComponent from "./CardComponent.js";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  componentDidMount() {}
+
+  render() {
+    return (
+      <div>
+        <nav
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <h1>
+            <b style={{ color: "#00AF73" }}>Magic</b> Notes
+          </h1>
+          <ToggleComponent />
+        </nav>
+
+        <SearchComponent />
+        <CardComponent />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.querySelector("#root"));
