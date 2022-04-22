@@ -11,7 +11,7 @@ class SearchComponent extends React.Component {
       <input
         placeholder="🔍 Search for your notes..."
         style={{
-          padding: "2%",
+          padding: "1%",
           border: "5px solid green",
           borderRadius: "10px",
           display: "block",

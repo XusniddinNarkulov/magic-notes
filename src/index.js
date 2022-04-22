@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import ToggleComponent from "./ToggleComponent.js";
 import SearchComponent from "./SearchComponent.js";
-import CardComponent from "./CardComponent.js";
+import CardsComponent from "./CardsComponent.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class App extends React.Component {
         </nav>
 
         <SearchComponent />
-        <CardComponent />
+        <CardsComponent />
       </div>
     );
   }
