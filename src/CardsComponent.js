@@ -7,150 +7,152 @@ import ReactDOM from "react-dom";
 
 let now = new Date();
 let defCard = (
-  <form
-    className="card"
-    style={{
-      borderRadius: "10px",
-      backgroundColor: "#00AF73",
-      padding: "4%",
-      height: "30vh",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-    }}
-  >
-    <textarea
-      maxLength="300"
+   <form
+      className="card"
       style={{
-        boxShadow: "0 5px 5px rgba(0,0,0,0.1)",
-        backgroundColor: "#00AF73",
-        border: "0",
-        outline: "none",
-        height: "75%",
-        padding: "3%",
-        borderRadius: "5px",
+         borderRadius: "10px",
+         backgroundColor: "#00AF73",
+         padding: "4%",
+         height: "40vh",
+         display: "flex",
+         flexDirection: "column",
+         justifyContent: "space-between",
       }}
-    ></textarea>
+   >
+      <textarea
+         maxLength="300"
+         style={{
+            boxShadow: "0 5px 5px rgba(0,0,0,0.1)",
+            backgroundColor: "#00AF73",
+            border: "0",
+            outline: "none",
+            height: "75%",
+            padding: "3%",
+            borderRadius: "5px",
+            marginBottom: "5%",
+            resize: "none",
+         }}
+      ></textarea>
 
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
-      <p>300 remaining</p>
-      <button
-        className="save"
-        style={{
-          border: "3px solid green",
-          borderRadius: "15px",
-          padding: "2% 4%",
-          cursor: "pointer",
-        }}
+      <div
+         style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+         }}
       >
-        Save
-      </button>
-    </div>
-  </form>
+         <p>300 remaining</p>
+         <button
+            className="save"
+            style={{
+               border: "3px solid green",
+               borderRadius: "15px",
+               padding: "2% 4%",
+               cursor: "pointer",
+            }}
+         >
+            Save
+         </button>
+      </div>
+   </form>
 );
 
 class CardsComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+   constructor(props) {
+      super(props);
+      this.state = {};
+   }
 
-  // addCard() {
-  //   textarea.forEach((val) => {
-  //     if (val.value == "") {
-  //       save.setAttribute("disabled");
-  //     }
-  //   });
-  // }
+   // addCard() {
+   //   textarea.forEach((val) => {
+   //     if (val.value == "") {
+   //       save.setAttribute("disabled");
+   //     }
+   //   });
+   // }
 
-  date = {
-    day: now.getDay(),
-    month: now.getMonth(),
-    year: now.getFullYear(),
-  };
+   date = {
+      day: now.getDay(),
+      month: now.getMonth(),
+      year: now.getFullYear(),
+   };
 
-  render() {
-    // this.addCard();
-    // save.addEventListener("submit", (e) => {
-    //   textarea.forEach((val) => {
-    //     if (val.value == "") {
-    //       save.setAttribute("disabled");
-    //     } else {
-    //       let noteCard = (
-    //         <form
-    //           className="card"
-    //           style={{
-    //             borderRadius: "10px",
-    //             backgroundColor: "#00AF73",
-    //             padding: "4%",
-    //             height: "30vh",
-    //             display: "flex",
-    //             flexDirection: "column",
-    //             justifyContent: "space-between",
-    //           }}
-    //         >
-    //           <textarea
-    //             maxLength="300"
-    //             style={{
-    //               boxShadow: "0 5px 5px rgba(0,0,0,0.1)",
-    //               backgroundColor: "#00AF73",
-    //               border: "0",
-    //               outline: "none",
-    //               height: "75%",
-    //               padding: "3%",
-    //               borderRadius: "5px",
-    //             }}
-    //           >
-    //             {val.value}
-    //           </textarea>
+   render() {
+      // this.addCard();
+      // save.addEventListener("submit", (e) => {
+      //   textarea.forEach((val) => {
+      //     if (val.value == "") {
+      //       save.setAttribute("disabled");
+      //     } else {
+      //       let noteCard = (
+      //         <form
+      //           className="card"
+      //           style={{
+      //             borderRadius: "10px",
+      //             backgroundColor: "#00AF73",
+      //             padding: "4%",
+      //             height: "30vh",
+      //             display: "flex",
+      //             flexDirection: "column",
+      //             justifyContent: "space-between",
+      //           }}
+      //         >
+      //           <textarea
+      //             maxLength="300"
+      //             style={{
+      //               boxShadow: "0 5px 5px rgba(0,0,0,0.1)",
+      //               backgroundColor: "#00AF73",
+      //               border: "0",
+      //               outline: "none",
+      //               height: "75%",
+      //               padding: "3%",
+      //               borderRadius: "5px",
+      //             }}
+      //           >
+      //             {val.value}
+      //           </textarea>
 
-    //           <div
-    //             style={{
-    //               display: "flex",
-    //               justifyContent: "space-between",
-    //               alignItems: "center",
-    //             }}
-    //           >
-    //             <p>300 remaining</p>
-    //             <button
-    //               className="save"
-    //               style={{
-    //                 border: "3px solid green",
-    //                 borderRadius: "15px",
-    //                 padding: "2% 4%",
-    //                 cursor: "pointer",
-    //               }}
-    //             >
-    //               Save
-    //             </button>
-    //           </div>
-    //         </form>
-    //       );
-    //       cardGrid.innerHTML += noteCard;
-    //     }
-    //   });
-    // });
+      //           <div
+      //             style={{
+      //               display: "flex",
+      //               justifyContent: "space-between",
+      //               alignItems: "center",
+      //             }}
+      //           >
+      //             <p>300 remaining</p>
+      //             <button
+      //               className="save"
+      //               style={{
+      //                 border: "3px solid green",
+      //                 borderRadius: "15px",
+      //                 padding: "2% 4%",
+      //                 cursor: "pointer",
+      //               }}
+      //             >
+      //               Save
+      //             </button>
+      //           </div>
+      //         </form>
+      //       );
+      //       cardGrid.innerHTML += noteCard;
+      //     }
+      //   });
+      // });
 
-    return (
-      <div
-        className="cardGrid"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          gap: "2%",
-          marginTop: "2%",
-        }}
-      >
-        {defCard}
-      </div>
-    );
-  }
+      return (
+         <div
+            className="cardGrid"
+            style={{
+               display: "grid",
+               gridTemplateColumns: "1fr 1fr 1fr",
+               gap: "2%",
+               marginTop: "2%",
+            }}
+         >
+            {defCard}
+         </div>
+      );
+   }
 }
 
 export default CardsComponent;
