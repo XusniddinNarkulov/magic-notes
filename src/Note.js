@@ -7,6 +7,10 @@ export default class Note extends Component {
       this.state = {};
    }
 
+   del = () => {
+      this.props.handleDeleteNote(this.props.id);
+   };
+
    render() {
       return (
          <div>
@@ -34,6 +38,7 @@ export default class Note extends Component {
                      borderRadius: "5px",
                      marginBottom: "5%",
                      resize: "none",
+                     color: "black",
                   }}
                   disabled
                >
@@ -48,7 +53,12 @@ export default class Note extends Component {
                   }}
                >
                   <p>{this.props.date}</p>
-                  <b style={{ fontSize: "2rem" }}>🗑</b>
+                  <b
+                     style={{ fontSize: "2rem", cursor: "pointer" }}
+                     onClick={this.del}
+                  >
+                     🗑
+                  </b>
                </div>
             </form>
          </div>
