@@ -51,9 +51,10 @@ class App extends React.Component {
    //    this.checkStorage();
    // }
    componentDidUpdate(prevProps, prevState) {
-      if (prevState.notes !== this.state.notes) {
-         localStorage.setItem("magicNotes", JSON.stringify(this.state.notes));
-      }
+      // if (prevState.notes !== this.state.notes) {
+      //    localStorage.setItem("magicNotes", JSON.stringify(this.state.notes));
+      // }
+      localStorage.setItem("magicNotes", JSON.stringify(this.state.notes));
    }
 
    render() {
